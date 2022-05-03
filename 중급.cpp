@@ -2,11 +2,27 @@
 using namespace std;
 
 int main() {
-	char a;
-	cout << "대문자를 입려해 주세요 :";
-	cin >> a;
-	int b = a + 32;
-	char c = b;
-	cout << "대문자" << a << "의 소문자는" << c << "입니다.";
-	return 0;
+
+	int user_floor;
+	cout << "몇층? :";
+	cin >> user_floor;
+	int floor = 1;
+	while (floor <= user_floor)
+	{
+		for (int i = 0; i < user_floor - floor; i++) {
+			cout << " ";
+		}
+		for (int j = 0; j < floor * 2 - 1; j++) {
+			cout << "*";
+		}
+		for (int i = 0; i < user_floor - floor; i++) {
+			cout << " ";
+		}
+		cout << "\n";
+		floor = floor + 1;
+	}
+		
+
+
+
 }
